@@ -36,3 +36,4 @@ print(c)
 print(maxChet)
 print(maxNeChet)
 print(arithmeticAverage/counter)
+#123
