@@ -1,16 +1,17 @@
 a = int(input())
 b = int(input())
-dx = int(input())
+dx = float(input())
 
 negative = []
 positive = []
 
-for x in range(a, b+1, dx):
+for x in range(a, b+1):
     y = 2*x**3 - x**2 - 3*x
     if y<0:
         negative.append(y)
     elif y>0:
         positive.append(y)
+    a += dx
 
 maxNegative = negative[0]
 minPositive = positive[0]

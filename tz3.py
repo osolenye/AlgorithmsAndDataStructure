@@ -1,39 +1,33 @@
-import math
-
+n = int(input())
 a = []
-for i in range(1, 26):
-    a.append(i)
 
+for i in range(n):
+    num = int(input())
+    a.append(num)
+print(a)
 
-maxChet = 0
-maxNeChet = 0
-for j in a:
-    if (j%2==0 and j>maxChet):
-        maxChet = j
-    if (j%2!=0 and j>maxNeChet):
-        maxNeChet = j
-
-# print(maxChet)
-# print(maxNeChet)
-
-numberMin = min(maxChet, maxNeChet)
-numberMax = max(maxChet, maxNeChet)
-c = []
-
-for k in range(1,numberMin):
-    c.append(k)
-
-for k in range(numberMax, 25):
-    c.append(k)
-
-counter = 0
-arithmeticAverage =0
-for i in c:
-    arithmeticAverage += k
-    counter += 1
-
-print(c)
+maxChet = a[0]
+for i in a:
+    if (i>maxChet and i%2==0):
+        maxChet = i
 print(maxChet)
-print(maxNeChet)
-print(arithmeticAverage/counter)
-#123
+
+maxNechet = a[0]
+for j in a:
+    if (j>maxNechet and j%2!=0):
+        maxNechet = j
+print(maxNechet)
+
+mas = []
+for i in range(0, min(a.index(maxChet), a.index(maxNechet))):
+    mas.append(a[i])
+for j in range(max(a.index(maxChet), a.index(maxNechet))+1, n):
+    mas.append(a[j])
+print(mas)
+
+summa = 0
+counter = 0
+for i in mas:
+    summa += i
+    counter += 1
+print(summa/counter)
