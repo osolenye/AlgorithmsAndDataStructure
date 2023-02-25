@@ -8,7 +8,7 @@ pogr = float(input())
 d = pogr*0.1
 
 def f(x):
-    return (math.sin(2*x)-x)
+    return math.sin(2*x)-x
 
 counter = 0
 
