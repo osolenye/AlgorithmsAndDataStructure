@@ -2,13 +2,13 @@ import math
 
 a = float(input())
 b = float(input())
-
-c = (a+b)/2
 pogr = float(input())
+
+
 d = pogr*0.1
 
 def f(x):
-    return math.sin(2*x)-x
+    return (x-2)**2
 
 counter = 0
 
@@ -21,9 +21,14 @@ while(b-a)>pogr:
         b = x2
     if f1>=f2:
         a = x1
+    print()
     counter += 1
-print(counter)
-
+    print(counter)
+    print(round(x1, 8), round(f(x1), 8))
+    print(round(x2, 8), round(f(x2), 8))
+    # x = (a + b) / 2
+    # print(x)
+    # print(f(x))
 x = (a+b)/2
 print(x)
 print(f(x))
