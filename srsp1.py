@@ -24,8 +24,9 @@ while(b-a)>pogr:
     print()
     counter += 1
     print(counter)
-    print(round(x1, 8), round(f(x1), 8))
-    print(round(x2, 8), round(f(x2), 8))
+    # print(round(x1, 8), round(f(x1), 8))
+    # print(round(x2, 8), round(f(x2), 8))
+    print(round(b-a, 8))
     # x = (a + b) / 2
     # print(x)
     # print(f(x))

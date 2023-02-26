@@ -32,7 +32,10 @@ while (counter)<n:
             x1 = x2
             f1 = f(x2)
     counter += 1
-print((x0+x3)/2)
-print((f1+f2)/2)
+    print(counter)
+    print(round(x0, 8), round(x3, 8))
+    print(round(f1, 8), round(f2, 8))
+    # print((x0+x3)/2)
+    # print((f1+f2)/2)
 
 
