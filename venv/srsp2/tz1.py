@@ -20,6 +20,6 @@ print(counter)
 if (counter!=0):
     array.pop(counter-1)
 else:
-    print("Didn't delete anything")
+    print("Didn't delete anything.")
 print(array)
 
