@@ -1,16 +1,23 @@
-trains = {}
+import json
+
+
+with open('trains.txt') as f:
+    data = f.read()
+
+
+trains = json.loads(data)
 
 def add():
     num = int(input("введите номер поезда: "))
     station = input("введите станцию назначения: ")
     time = input("введите время отправления: ")
     trains[num] = [station, time]
-    # save_trains()
 
-# def save_trains():
-#     with open("trains.txt", "w") as file:
-#         for key, val in trains.items():
-#             file.write(f"{key}:")
+    #записывает в файл наш словарь
+    with open('trains.txt', 'w') as trains_txt:
+        trains_txt.write(json.dumps(trains))
+
+
         
 
 
@@ -39,6 +46,13 @@ print('список команд для работы с системой: \n'
 
 
 while True:
+
+    #подгружает из файла наш словарь
+    with open('trains.txt') as f:
+        data = f.read()
+
+    trains = json.loads(data)
+
     a = input()
     if a == "add":
         add()
